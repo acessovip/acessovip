@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "SLRFV527N9.br.com.facility.facility",
+        "paths": [ "/register/*" ]
+      }
+    ]
+  }
+}
