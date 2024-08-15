@@ -1,10 +1,4 @@
 {
-  "routes": [
-    {
-      "src": "/.well-known/(.*)",
-      "dest": "/public/.well-known/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",
@@ -14,6 +8,13 @@
           "value": "application/json"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "destination": "/public/.well-known/apple-app-site-association",
+      "permanent": true
     }
   ]
 }
