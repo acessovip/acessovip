@@ -1,38 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to AcessVIP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+    <title>Acesso VIP</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to AcessVIP</h1>
-        <p>Your website is successfully deployed!</p>
-    </div>
+    <header>
+        <div class="logo-container">
+            <img src="..\assets\logo.svg" alt="Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#section2">Planos</a></li>
+                <li><a href="#section3">Suporte</a></li>
+                <li><a class="section-4" href="#section4">Instalar App</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        <!-- Seção de Banner -->
+        <section class="banner">
+            <div class="banner-content">
+                <h1>SEU APP DE EVENTOS CHEGOU!!</h1>
+                <a href="#section4" class="banner-button">Instalar App</a>
+            </div>
+        </section>
+
+        <section id="tutorial" class="tutorial">
+            <div class="tutorial-container">
+                <div class="tutorial-left">
+                    <img src="../assets/image.png" alt="Imagem do App">
+                </div>
+                <div class="tutorial-right">
+                    <h2>Facilite a organização e o monitoramento de seus eventos</h2>
+                    <p>Nosso aplicativo móvel oferece uma solução prática e eficiente para a gestão de eventos. Com ele, você tem:</p>
+                    <ul>
+                        <li><strong>Acesso Imediato:</strong> Receba suas cortesias digitais instantaneamente, sem esperar pelo correio ou retiradas físicas.</li>
+                        <li><strong>Armazenamento Simplificado:</strong> Nada de preocupações com ingressos físicos. Tudo acessível no smartphone.</li>
+                        <li><strong>Verificação Digital:</strong> Reduz fraudes, com cortesias verificáveis eletronicamente.</li>
+                        <li><strong>Controle de Acesso em Tempo Real:</strong> Monitore a entrada e controle a capacidade do evento em tempo real.</li>
+                        <li><strong>Gestão de Convidados Simplificada:</strong> Gerencie quem tem acesso ao evento sem necessidade de listas impressas.</li>
+                        <li><strong>Informações em Tempo Real:</strong> Obtenha dados analíticos sobre a participação dos convidados para otimizar eventos futuros.</li>
+                        <li><strong>Facilidade de Distribuição:</strong> Envie convites e cortesias de forma instantânea e eficiente para um grande número de convidados.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="promotion-and-video">
+                <div class="app-promotion">
+                    <img src="../assets/phone.png" alt="Aplicativo em todas as plataformas">
+                    <p><strong>Estamos disponíveis em todas as plataformas</strong>, basta baixar o aplicativo e criar sua conta.</p>
+                </div>
+                <div class="video-tutorial">
+                    <h3>Veja nosso vídeo tutorial para aprender como criar eventos, ganhar cortesias e muito mais!</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/seu-video-id-aqui" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+        
+
+    <section id="section2">
+        <h1>Bem-vindo à Seção 2</h1>
+        <p>Conteúdo da Seção 2</p>
+    </section>
+
+    <section id="section3">
+        <h1>Bem-vindo à Seção 3</h1>
+        <p>Conteúdo da Seção 3</p>
+    </section>
+
+    <section id="section4">
+        <h1>Bem-vindo à Seção 4</h1>
+        <p>Conteúdo da Seção 4</p>
+    </section>
+
 </body>
 </html>
