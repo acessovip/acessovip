@@ -3,7 +3,7 @@
 
 /* Definições básicas */
 body {
-    margin: 0;
+    margin: 5;
     font-family: 'Poppins', sans-serif;
     background-color: #1E212B; /* Cor de fundo principal */
     color: white; /* Cor do texto */
@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 12%; /* Padding lateral de 12% para garantir espaço */
+    padding: 10px 13%; /* Padding lateral de 12% para garantir espaço */
     background: linear-gradient(to bottom, rgba(30, 33, 43, 0.8), rgba(30, 33, 43, 0.6)); /* Gradiente transparente */
     position: fixed;
     width: 100%;
@@ -77,7 +77,7 @@ nav ul li a.section-4 {
 /* Estilo da Seção de Banner */
 .banner {
     height: 100vh; /* Ocupar a altura total da viewport */
-    background-image: url('../assets/banner.png'); /* Substitua pelo caminho correto da imagem */
+    background-image: url('assets/banner.png'); /* Substitua pelo caminho correto da imagem */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -123,13 +123,6 @@ nav ul li a.section-4 {
 
 .banner-button:hover {
     background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Estilos das Seções */
-section {
-    padding: 100px 30px;
-    min-height: 100vh;
-    box-sizing: border-box;
 }
 
 /* Estilo da Seção de Tutorial */
@@ -199,7 +192,7 @@ section {
 
 .app-promotion img {
     width: 100%;
-    max-width: 10000px;
+    max-width: 800px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
@@ -228,12 +221,108 @@ section {
     border-radius: 10px;
 }
 
-#section2 {
-    background-color: #1E212B;
+/* Estilo do Slider */
+.slider-container {
+    text-align: center;
+    margin: 50px 0;
 }
 
-#section3 {
+.slider-container label {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#courtesy-slider {
+    width: 70%;
+    margin-bottom: 15px;
+    
+}
+
+#slider-value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #088745;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan {
     background-color: #242730;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1 1 200px;
+    max-width: 300px;
+}
+
+.plan h3 {
+    margin-bottom: 20px;
+}
+
+.plan p {
+    margin: 10px 0;
+}
+
+.plan .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #088745;
+}
+
+.plan button {
+    background-color: #088745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.plan button:hover {
+    background-color: #066837;
+}
+
+/* Estilo das opções de contato */
+.contact-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    background-color: #2D313C;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-option img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.contact-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 14px;
 }
 
 #section4 {
@@ -244,82 +333,98 @@ section {
     align-items: center;
 }
 
-/* Regras de Responsividade */
-@media (max-width: 768px) {
+/* Responsividade */
+@media (max-width: 769px) {
     header {
         flex-direction: column;
         align-items: center;
         padding: 15px 10px;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        text-align: center;
-        display: none; /* Esconder o menu em dispositivos móveis */
-    }
-
-    nav ul li a {
-        display: block;
-        width: 80%; /* Botão centralizado e com largura ajustada */
-        margin: 20px auto;
+    nav {
+        display: none; /* Esconde o menu em dispositivos móveis */
     }
 
     .logo-container {
         margin-bottom: 20px;
     }
 
-    /* Esconder as seções */
+    /* Ajuste para centralizar todo o conteúdo */
     section {
-        display: none;
+        padding: 50px 5%;
+        text-align: center;
+        display: block;
     }
 
-    /* Mostrar apenas a seção com o botão principal */
-    #section4 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 20px;
-    }
-    /* Regras de Responsividade para Banner */
-    @media (max-width: 768px) {
-        .banner h1 {
-            font-size: 32px;
-        }
-
-        .banner-button {
-            font-size: 16px;
-            padding: 10px 20px;
-        }
+    /* Ajuste das imagens */
+    img {
+        max-width: 100%; /* Ajusta as imagens para caber na tela */
+        height: auto; /* Mantém a proporção das imagens */
     }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-        .tutorial-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .tutorial-right {
-            max-width: 100%;
-            margin-left: 0;
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .promotion-and-video {
-            margin-top: 40px;
-        }
-
-        .video-tutorial iframe {
-            width: 100%;
-            height: auto;
-        }
+    /* Ajuste para remover bordas extras e centralizar tudo */
+    .tutorial-container, .plans-container {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%; /* Garante que o conteúdo ocupe 100% da largura */
+        max-width: 100%; /* Remover bordas e garantir largura máxima */
     }
 
+    .plans-container {
+        flex-direction: column; /* Planos empilhados */
+        gap: 15px;
+        padding: 0 15px; /* Centralizar planos */
+    }
 
+    .plan {
+        max-width: 100%; /* Largura máxima ajustada para o container */
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .plan h3 {
+        font-size: 1.3rem; /* Reduzido para telas menores */
+        margin-bottom: 10px; /* Mais espaço entre o título e o texto */
+    }
+
+    .plan p {
+        font-size: 1rem; /* Mantido para boa legibilidade */
+        margin-bottom: 15px; /* Mais espaço entre os parágrafos */
+    }
+
+    .plan .price {
+        font-size: 1.5rem; /* Reduzido para telas menores */
+        margin-bottom: 15px; /* Mais espaço abaixo do preço */
+    }
+
+    .plan button {
+        font-size: 1rem; /* Tamanho do botão ajustado */
+        padding: 10px 20px; /* Mais espaço interno nos botões */
+    }
+
+    .tutorial-right, .tutorial-left {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .promotion-and-video {
+        margin-top: 40px;
+    }
+
+    .video-tutorial iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-options {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contact-option {
+        max-width: 250px; /* Tamanho ajustado para caber na tela maior */
+        width: 30%;
+    }
 }
-
