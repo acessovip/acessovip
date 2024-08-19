@@ -9,12 +9,12 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="assets\logo.svg" alt="Logo" class="logo">
+            <img src="..\assets\logo.svg" alt="Logo" class="logo">
         </div>
         <nav>
             <ul>
                 <li><a href="#tutorial">Tutorial</a></li>
-                <li><a href="#section2">Planos</a></li>
+                <li><a href="#plans">Planos</a></li>
                 <li><a href="#section3">Suporte</a></li>
                 <li><a class="section-4" href="#section4">Instalar App</a></li>
             </ul>
@@ -62,20 +62,124 @@
         
         
 
-    <section id="section2">
-        <h1>Bem-vindo à Seção 2</h1>
-        <p>Conteúdo da Seção 2</p>
-    </section>
+        <section id="plans" style="margin: 100px;">
+            <div class="slider-container">
+                <label for="courtesy-slider">Quantas cortesias por mês você precisa?</label>
+                <input type="range" id="courtesy-slider" min="0" max="12000" value="0" step="400" oninput="updatePrices(this.value)">
+                <span id="slider-value">0</span>
+            </div>
+        
+            <div class="plans-container">
+                <div class="plan">
+                    <h3>Gratuito</h3>
+                    <p>Automatize fluxos de trabalho básicos com <span id="free-courtesy">0</span> cortesias por mês.</p>
+                    <p class="price">R$0/mês</p>
+                    <button>Experimente grátis</button>
+                </div>
+                <div class="plan">
+                    <h3>Mensal</h3>
+                    <p>Automatize fluxos de trabalho com <span id="monthly-courtesy">0</span> cortesias por mês.</p>
+                    <p class="price">R$<span id="monthly-price">15,00</span>/mês</p>
+                    <button>Experimente grátis</button>
+                </div>
+                <div class="plan">
+                    <h3>Trimestral</h3>
+                    <p>Automatize fluxos de trabalho com <span id="quarterly-courtesy">0</span> cortesias por mês.</p>
+                    <p class="price">R$<span id="quarterly-price">40,00</span>/trimestre</p>
+                    <button>Experimente grátis</button>
+                </div>
+                <div class="plan">
+                    <h3>Anual</h3>
+                    <p>Automatize fluxos de trabalho com <span id="annual-courtesy">0</span> cortesias por mês.</p>
+                    <p class="price">R$<span id="annual-price">150,00</span>/ano</p>
+                    <button>Experimente grátis</button>
+                </div>
+            </div>
+        </section>
+        
+        
+        
 
-    <section id="section3">
-        <h1>Bem-vindo à Seção 3</h1>
-        <p>Conteúdo da Seção 3</p>
-    </section>
+        <section id="support" style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #242730;">
+            <h2>Fale Conosco</h2>
+            <p>Estamos aqui para ajudá-lo! Entre em contato conosco através dos seguintes canais:</p>
+            
+            <div class="contact-options">
+                <div class="contact-option">
+                    <img src="assets/whatsapp.png" alt="WhatsApp">
+                    <div class="contact-info">
+                        <h3>WhatsApp</h3>
+                        <p>Clique para conversar no WhatsApp</p>
+                    </div>
+                </div>
+                
+                <div class="contact-option">
+                    <img src="assets/email.png" alt="Email">
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <p>Envie um email para nosso suporte</p>
+                    </div>
+                </div>
+                
+                <div class="contact-option">
+                    <img src="assets/insta.png" alt="Instagram">
+                    <div class="contact-info">
+                        <h3>Instagram</h3>
+                        <p>Siga-nos no Instagram</p>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        
 
     <section id="section4">
         <h1>Bem-vindo à Seção 4</h1>
         <p>Conteúdo da Seção 4</p>
     </section>
-
+    <script>
+        function updatePrices(courtesyCount) {
+            const initialValue = courtesyCount < 100 ? courtesyCount : (Math.floor((courtesyCount - 100) / 500) * 400 + 100);
+            document.getElementById('slider-value').textContent = initialValue;
+            document.getElementById('free-courtesy').textContent = initialValue;
+            document.getElementById('monthly-courtesy').textContent = initialValue;
+            document.getElementById('quarterly-courtesy').textContent = initialValue;
+            document.getElementById('annual-courtesy').textContent = initialValue;
+    
+            const baseMonthlyPrice = 15;
+            const baseQuarterlyPrice = 40;
+            const baseAnnualPrice = 150;
+    
+            document.getElementById('monthly-price').textContent = (baseMonthlyPrice * initialValue / 500).toFixed(2);
+            document.getElementById('quarterly-price').textContent = (baseQuarterlyPrice * initialValue / 500).toFixed(2);
+            document.getElementById('annual-price').textContent = (baseAnnualPrice * initialValue / 500).toFixed(2);
+    
+            // Esconder o plano gratuito após 100 cortesias
+            const freePlan = document.querySelector('.plan:nth-child(1)');
+            if (initialValue > 100) {
+                freePlan.style.display = 'none';
+            } else {
+                freePlan.style.display = 'block';
+            }
+    
+            // Alterar os botões dos outros planos para "Compre Agora!" após 100 cortesias
+            const planButtons = document.querySelectorAll('.plan button');
+            planButtons.forEach((button, index) => {
+                if (index > 0) { // Ignorar o botão do plano gratuito
+                    if (initialValue > 100) {
+                        button.textContent = 'Compre Agora!';
+                    } else {
+                        button.textContent = 'Experimente grátis';
+                    }
+                }
+            });
+        }
+    </script>
+    
 </body>
 </html>
