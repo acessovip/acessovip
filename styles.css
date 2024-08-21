@@ -325,12 +325,51 @@ nav ul li a.section-4 {
     font-size: 14px;
 }
 
-#section4 {
-    background-color: #1E212B;
-    text-align: center;
+.platform-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 50px; /* Espaço entre os containers */
+    margin-top: 40px;
+}
+
+.platform {
+    background-color: #242730;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 250px;
+}
+
+.platform img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.platform h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.platform p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.install-button {
+    background-color: #088745;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.install-button:hover {
+    background-color: #066837;
 }
 
 /* Responsividade */
