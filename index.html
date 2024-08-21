@@ -9,14 +9,14 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="..\assets\logo.svg" alt="Logo" class="logo">
+            <img src="assets\logo.svg" alt="Logo" class="logo">
         </div>
         <nav>
             <ul>
                 <li><a href="#tutorial">Tutorial</a></li>
                 <li><a href="#plans">Planos</a></li>
-                <li><a href="#section3">Suporte</a></li>
-                <li><a class="section-4" href="#section4">Instalar App</a></li>
+                <li><a href="#support">Suporte</a></li>
+                <li><a href="#instalar" style="background-color: #066837;">Instalar App</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +25,7 @@
         <section class="banner">
             <div class="banner-content">
                 <h1>SEU APP DE EVENTOS CHEGOU!!</h1>
-                <a href="#section4" class="banner-button">Instalar App</a>
+                <a href="#instalar" class="banner-button">Instalar App</a>
             </div>
         </section>
 
@@ -98,8 +98,6 @@
         </section>
         
         
-        
-
         <section id="support" style="
         display: flex;
         flex-direction: column;
@@ -137,10 +135,25 @@
         
         </section>
         
-
-    <section id="section4">
-        <h1>Bem-vindo à Seção 4</h1>
-        <p>Conteúdo da Seção 4</p>
+        <section id="instalar">
+            <h1>Instale o App Acesso VIP</h1>
+            <p>Escolha a plataforma do seu dispositivo e instale nosso aplicativo para aproveitar todas as funcionalidades!</p>
+            
+            <div class="platform-container">
+                <div class="platform">
+                    <img src="assets/android.png" alt="Android">
+                    <h2>Android</h2>
+                    <p>Baixe nosso aplicativo na Google Play Store para dispositivos Android.</p>
+                    <a href="https://play.google.com/store/apps/details?id=br.com.facility.facility" class="install-button" target="_blank" rel="noopener noreferrer">Baixar na Google Play</a>
+                </div>
+                <div class="platform">
+                    <img src="assets/apple.png" alt="iOS">
+                    <h2>iOS</h2>
+                    <p>Baixe nosso aplicativo na App Store para dispositivos iOS.</p>
+                    <a href="https://apps.apple.com/br/app/acesso-vip/id6478621364" class="install-button" target="_blank" rel="noopener noreferrer">Baixar na App Store</a>
+                </div>
+            </div>
+        </section>
     </section>
     <script>
         function updatePrices(courtesyCount) {
