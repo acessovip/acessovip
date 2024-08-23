@@ -237,7 +237,7 @@ nav ul li a.section-4 {
 
 #courtesy-slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 60%;
     height: 8px;
     background: #088745; /* Cor de fundo padrão */
     outline: none;
