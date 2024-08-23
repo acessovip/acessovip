@@ -307,40 +307,122 @@ nav ul li a.section-4 {
 .plan button:hover {
     background-color: #066837;
 }
-
-/* Estilo das opções de contato */
-.contact-options {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.contact-option {
-    display: flex;
-    align-items: center;
-    background-color: #2D313C;
+/* Estilo da seção de suporte */
+.support-preview {
+    background-color: #242730;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
-    padding: 15px;
+}
+
+.support-preview h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.support-preview p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.support-preview .email-link {
+    color: #088745;
+    text-decoration: none;
+}
+
+.support-preview .whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2f3030;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.support-preview .insta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2f3030;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.support-preview .faq-preview {
+    margin-top: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.support-preview .faq-item {
+    background-color: #2d313c;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.support-preview .faq-question {
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    background-color: #2d313c;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contact-option img {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
+.support-preview .faq-question:hover {
+    background-color: #3a3f4b;
 }
 
-.contact-info h3 {
-    margin: 0;
-    font-size: 18px;
+.support-preview .faq-answer {
+    padding: 15px;
+    display: none;
+    background-color: #383d47;
 }
 
-.contact-info p {
+.support-preview .faq-answer p {
     margin: 0;
     font-size: 14px;
+}
+
+.support-preview .faq-icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.support-preview .faq-question.active .faq-icon {
+    transform: rotate(45deg); /* Roda o ícone para representar o estado "fechado" */
+}
+
+.support-preview .view-all-link {
+    display: block;
+    margin-top: 20px;
+    color: #088745;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.support-preview .view-all-link:hover {
+    color: #0aab56;
 }
 
 /* Centralização da Seção de Instalação */
