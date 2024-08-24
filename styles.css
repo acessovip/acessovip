@@ -484,6 +484,18 @@ nav ul li a.section-4 {
     background-color: #066837;
 }
 
+.footer {
+    background-color: #1e1e1e; /* Cor de fundo do rodapé */
+    color: #aaaaaa; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento vertical */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.footer p {
+    margin: 5px 0; /* Margem entre as linhas do rodapé */
+}
+
 /* Responsividade adicional */
 @media (max-width: 600px) {
     .platform-container {
